@@ -109,7 +109,7 @@ class HKCLRROSClient:
         shortest = -0.1 if clockwise <= counterclockwise else 0.1
         return shortest
 
-    def supersuper(self, yaw0=0):
+    def Robot_turn_to(self, yaw0=0):
         if self.yaw is not None:
             if self.yaw_new is None:
                 self.yaw_new = self.yaw
@@ -147,7 +147,7 @@ if __name__ == "__main__":
     js_ang = 1
     a = 150
     while 1:
-        ros_client.supersuper(333)
+        ros_client.Robot_turn_to(333)
         time.sleep(0.03)
         print(ros_client.yaw)
 
